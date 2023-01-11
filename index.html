@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS grid</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      .box {
+        background-color: blueviolet;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .container {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 200px 100px 150px 300px;
+        grid-gap: 20px;
+      }
+      .siderbar {
+        grid-row: 1 / -1;
+      }
+      .header {
+        grid-column: 2 / -1;
+      }
+      .chartone {
+        grid-column: 2 / 4;
+      }
+      .chartwo {
+        grid-column: 4 / -1;
+      }
+      .overview {
+        grid-column: 2 / 5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box siderbar">SiderBar</div>
+      <div class="box header">Header</div>
+      <div class="box stateone">Stateone</div>
+      <div class="box statetwo">Statetwo</div>
+      <div class="box statethree">Statethree</div>
+      <div class="box statefour">Statefour</div>
+      <div class="box chartone">Char-one</div>
+      <div class="box chartwo">Char-two</div>
+      <div class="box overview">OverView</div>
+      <div class="box reminder">Reminder</div>
+    </div>
+  </body>
+</html>
